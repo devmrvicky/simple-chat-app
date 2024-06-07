@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px;
+}
+
+.head,
+.friends {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#chat-room {
+  border: 1px solid;
+  max-width: 400px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.you {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-request-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.requests {
+  display: flex;
+  flex-direction: column;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.request-info {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+#request-refresh-btn {
+  width: 30px;
+  height: 30px
+}
+
+#chat-cancel-btn,
+#refresh-btn {
+  margin-left: auto;
+}
+
+.chats-area {
+  width: 100%;
+  height: 300px;
+  border: 1px solid;
+  position: relative;
+}
+
+.chats {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: auto;
+}
+
+.your-message,
+.friend-message {
+  width: 100%;
+}
+
+.your-message>span {
+  background-color: rgb(255, 234, 196);
+  margin-left: auto;
+  padding: 5px 10px 5px 5px;
+  border-radius: 10px 0 10px 10px;
+}
+
+.friend-message>span {
+  background-color: rgb(227, 255, 185);
+  border-radius: 0 10px 10px 10px;
+  /* margin-left: auto; */
+  margin: 0;
+  padding: 5px 5px 5px 10px;
+}
+
+.your-message>span,
+.friend-message>span {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 60%;
+}
+
+#refresh-chats-btn {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+#send-message-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#send-message-form input {
+  flex: 1;
+  width: 100%;
+  padding: 3px 5px;
+}

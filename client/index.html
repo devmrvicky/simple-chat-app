@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <dialog id="create-user-dialog" close>
+      <button type="button" id="close-dialog">close</button>
+      <form id="create-user">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="vikash kumar">
+        <br>
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" value="@vikash">
+        <br>
+        <!-- <label for="password">Password</label>
+        <input type="password" name="password" id="password" value="1234">
+        <br> -->
+        <button type="submit">create user</button>
+      </form>
+
+    </dialog>
+
+    <h1>Talk to strangers</h1>
+
+    <div id="chat-room">
+      <div class="head">
+        <p class="name">
+          <span>you</span>
+          <span class="you">_ _</span>
+        </p>
+        <button type="button" id="open-dialog">talk as new</button>
+      </div>
+      <div class="chat-requests">
+        <div class="chat-request-head">
+          <p>chat request</p>
+          <button type="button" id="request-refresh-btn">&#8634;</button>
+        </div>
+        <div class="requests">
+          <!-- <div class="request-info">
+            <p>'vikash (@vikash)' has been sent a chat request</p>
+            <button type="button" id="cancel-chat-btn">cancel</button>
+            <button type="button" id="join-chat-btn">join</button>
+          </div> -->
+          <i>Nobody has been sent request to you</i>
+        </div>
+      </div>
+      <div class="friends">
+        <select title="friend" name="friend" id="friend">
+          <option value="select stranger" selected disabled>select stranger</option>
+        </select>
+        <button type="button" id="refresh-btn">refresh</button>
+        <button type="button" id="close-chat">close chat</button>
+        <button type="button" id="new-chat-btn">new chat</button>
+      </div>
+      <div class="chats-area">
+        <div class="chats">
+          <!-- <p class="your-message">
+            <span>this message sent by you</span>
+          </p>
+          <p class="your-message">
+            <span>hi...</span>
+          </p>
+          <p class="friend-message">
+            <span>this message sent by your friend</span>
+          </p>
+          <p class="friend-message">
+            <span>hello brother</span>
+          </p> -->
+        </div>
+        <button type="button" id="refresh-chats-btn">&#8634;</button>
+      </div>
+      <form action="" method="post" id="send-message-form">
+        <input type="text" name="message" id="message" placeholder="type message here...">
+        <button type="submit">send</button>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
